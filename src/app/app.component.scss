@@ -1,0 +1,25 @@
+body{
+  background: lightgrey;
+}
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+
+ & nav{
+   margin-bottom: 20px!important;
+ }
+
+}
+.product{
+  display: flex;
+  align-items: center;
+  & p:first-child{
+    color: blue;
+  }
+  & p{
+    color: red;
+  }
+  & *{
+    margin-right: 10px;
+  }
+}

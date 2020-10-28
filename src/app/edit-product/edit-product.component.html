@@ -1,0 +1,22 @@
+<div class="container">
+  <p>Edit Product</p>
+  <nav>
+    <a routerLink="/">Product List</a>
+    <a href="/newProduct">New Product</a>
+  </nav>
+
+  <form>
+    <h2>Editing priduct number {{this.id}}</h2>
+    <p>
+    <input type="text" placeholder="name" [(ngModel)]="names.nameProd" name="name" required>
+    </p>
+    <p>
+    <input type="text" placeholder="price" [(ngModel)]="names.priceProd" name="price" required>
+    </p>
+    <button (click)="editProd()">edit</button>
+    <button (click)="deleteProd()">delete</button>
+  </form>
+</div>
+
+
+

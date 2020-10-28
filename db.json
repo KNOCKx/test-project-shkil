@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "name": "Samsung3",
+      "price": "231$",
+      "id": 4
+    },
+    {
+      "id": 4,
+      "name": "Hyperload",
+      "price": "200$"
+    },
+    {
+      "id": 1,
+      "name": "Samsung galaxy Gio",
+      "price": "543$"
+    }
+  ]
+}
