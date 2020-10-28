@@ -12,7 +12,7 @@ export interface Product {
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 
 export class ProductsListComponent implements OnInit {
@@ -22,13 +22,13 @@ export class ProductsListComponent implements OnInit {
 
 
   ngOnInit() {
-    let url = 'http://localhost:3000/products'
     this.http.get<Product[]>('http://localhost:3000/products')
       .subscribe(products => {
         console.log("Response", products);
         this.products = products
       })
   }
+
   getNavigation(link, id){
     if(id === ''){
       this.router.navigate([link]);

@@ -1,12 +1,22 @@
-<p>edit-product works!</p>
-<nav>
-  <a routerLink="/">Product List</a>
-  <a href="/newProduct">New Product</a>
-  <a href="/editProduct">Edit Product</a>
-</nav>
-<div *ngFor="let editProduct of editProducts; let i = index">
-  <p>{{editProduct.id | json}}</p>
-  <p>{{editProduct.name | json}}</p>
-  <p>{{editProduct.price | json}}</p>
+<div class="container">
+  <p>Edit Product</p>
+  <nav>
+    <a routerLink="/">Product List</a>
+    <a href="/newProduct">New Product</a>
+  </nav>
 
+  <form>
+    <h2>Editing priduct number {{this.id}}</h2>
+    <p>
+    <input type="text" placeholder="name" [(ngModel)]="names.nameProd" name="name" required>
+    </p>
+    <p>
+    <input type="text" placeholder="price" [(ngModel)]="names.priceProd" name="price" required>
+    </p>
+    <button (click)="editProd()">edit</button>
+    <button (click)="deleteProd()">delete</button>
+  </form>
 </div>
+
+
+

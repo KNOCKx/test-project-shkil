@@ -1,17 +1,15 @@
-<p>products-list works HOME!</p>
-<nav>
-  <a routerLink="/">Product List</a>
-  <a href="/newProduct">New Product</a>
-  <a href="/editProduct">Edit Product</a>
-</nav>
-<!-- <div>
-  <button (click)="loadProduct()">Load profile</button>
-  {{ product | json }}
-</div> -->
+<div class="container">
+  <p>Product List</p>
+  <nav>
+    <a routerLink="/">Product List</a>
+    <a href="/newProduct">New Product</a>
+  </nav>
 
-<div *ngFor="let product of products">
-  <p>{{product.id | json}}</p>
-  <p>{{product.name | json}}</p>
-  <p>{{product.price | json}}</p>
-  <button (click)="getNavigation('editProduct', product.id)"></button>
+
+  <div class="product" *ngFor="let product of products">
+    <p>{{product.id | json}}</p>
+    <p>{{product.name | json}}</p>
+    <p>{{product.price | json}}</p>
+    <div><button (click)="getNavigation('editProduct', product.id)">Trying to edit {{product.name}}</button></div>
+  </div>
 </div>
